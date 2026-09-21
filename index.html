@@ -276,7 +276,7 @@
                 <p>Perbedaannya signifikan (t = -18,34; p &lt; 0,05) dengan ukuran efek besar (Cohen's d = 1,63).</p>
               </dd>
             </dl>
-            <p class="case-link"><a class="btn line small" data-nb="ab-testing-experimentation.ipynb" href="notebooks/ab-testing-experimentation.ipynb" hidden>Lihat notebook di GitHub</a></p>
+            <p class="case-link"><a class="btn line small" href="https://github.com/ramadhana-id/My-Notebook/blob/main/ab-testing-experimentation.ipynb" target="_blank" rel="noopener">Lihat notebook di GitHub</a></p>
           </article>
 
           <article class="case">
@@ -295,7 +295,7 @@
                 <p>Contohnya segmen dengan limit 50.000 yang sebagian besar belum terpakai (klaster 4), segmen dengan rata-rata transaksi tertinggi, sekitar 414 (klaster 2), dan segmen dengan limit rendah, sekitar 3.100, dan transaksi kecil (klaster 0).</p>
               </dd>
             </dl>
-            <p class="case-link"><a class="btn line small" data-nb="customer-segmentation-kmeans.ipynb" href="notebooks/customer-segmentation-kmeans.ipynb" hidden>Lihat notebook di GitHub</a></p>
+            <p class="case-link"><a class="btn line small" href="https://github.com/ramadhana-id/My-Notebook/blob/main/customer-segmentation-kmeans.ipynb" target="_blank" rel="noopener">Lihat notebook di GitHub</a></p>
           </article>
 
           <article class="case">
@@ -314,7 +314,7 @@
                 <p>Median gaji kedua kelompok hampir sama, dan usia serta gaji tidak menunjukkan hubungan yang kuat dengan riwayat stres.</p>
               </dd>
             </dl>
-            <p class="case-link"><a class="btn line small" data-nb="eda-statistics.ipynb" href="notebooks/eda-statistics.ipynb" hidden>Lihat notebook di GitHub</a></p>
+            <p class="case-link"><a class="btn line small" href="https://github.com/ramadhana-id/My-Notebook/blob/main/eda-statistics.ipynb" target="_blank" rel="noopener">Lihat notebook di GitHub</a></p>
           </article>
 
           <article class="case">
@@ -333,7 +333,7 @@
                 <p>Pengecekan juga menemukan 72 baris duplikat dalam data yang tersisa.</p>
               </dd>
             </dl>
-            <p class="case-link"><a class="btn line small" data-nb="data-collection-cleaning.ipynb" href="notebooks/data-collection-cleaning.ipynb" hidden>Lihat notebook di GitHub</a></p>
+            <p class="case-link"><a class="btn line small" href="https://github.com/ramadhana-id/My-Notebook/blob/main/data-collection-cleaning.ipynb" target="_blank" rel="noopener">Lihat notebook di GitHub</a></p>
           </article>
         </div>
       </div>
@@ -466,7 +466,7 @@
             <li><span class="k">Email</span><a href="mailto:ramadhana745@gmail.com">ramadhana745@gmail.com</a></li>
             <li><span class="k">WhatsApp</span><a href="https://wa.me/6285176749593">085176749593</a></li>
             <li><span class="k">Telepon</span><a href="tel:+6285176749593">085176749593</a></li>
-            <li data-gh hidden><span class="k">GitHub</span><a href="#"></a></li>
+            <li><span class="k">GitHub</span><a href="https://github.com/ramadhana-id" target="_blank" rel="noopener">github.com/ramadhana-id</a></li>
             <li><span class="k">Domisili</span><span class="v">Jenggawah, Jember, Jawa Timur</span></li>
           </ul>
         </div>
@@ -479,24 +479,5 @@
   <div class="wrap">Ramadhana, 2026</div>
 </footer>
 
-<script>
-  (function () {
-    var m = location.hostname.match(/^([a-z0-9-]+)\.github\.io$/i);
-    if (!m) return;
-    var user = m[1], repo = location.hostname;
-    document.querySelectorAll('a[data-nb]').forEach(function (a) {
-      a.href = 'https://github.com/' + user + '/' + repo + '/blob/main/notebooks/' + a.getAttribute('data-nb');
-      a.target = '_blank';
-      a.rel = 'noopener';
-      a.hidden = false;
-    });
-    document.querySelectorAll('[data-gh]').forEach(function (li) {
-      var a = li.querySelector('a');
-      a.href = 'https://github.com/' + user;
-      a.textContent = 'github.com/' + user;
-      li.hidden = false;
-    });
-  })();
-</script>
 </body>
 </html>

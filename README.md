@@ -1,27 +1,64 @@
-# Portofolio Ramadhana
+# Ramadhana — Finance & Data Analytics
 
-Akuntan dan Data Analis | Head Finance & Business Intelligence
+**Akuntan & Data Analyst | Head Finance & Business Intelligence**
 
-Repository ini berisi halaman portofolio (`index.html`) dan empat notebook analisis data yang saya kerjakan dengan Python.
+Saya memadukan pengalaman di bidang akuntansi dan keuangan dengan analisis data untuk mengubah data menjadi informasi yang mendukung pengambilan keputusan.
 
-## Proyek analisis data
+🌐 **Portfolio:** https://ramadhana-id.github.io/My-Notebook/
 
-| Proyek | Ringkasan | Alat |
-|---|---|---|
-| [Uji A/B: dampak varian baru terhadap pendapatan 30 hari](ab-testing-experimentation.ipynb) | 505 pengguna aplikasi langganan dibandingkan antara varian A dan B. Varian B menghasilkan rata-rata pendapatan 30 hari 480,67 dibanding 400,29 pada varian A (sekitar 20% lebih tinggi), signifikan secara statistik (t = -18,34; p < 0,05; Cohen's d = 1,63). | pandas, SciPy, Seaborn |
-| [Segmentasi nasabah kartu kredit dengan K-Means](customer-segmentation-kmeans.ipynb) | 641.914 transaksi kartu kredit dianalisis; 49.457 data lengkap dikelompokkan menjadi 6 segmen dengan RobustScaler, elbow method, K-Means, dan visualisasi PCA 2D. | pandas, scikit-learn, Matplotlib, Seaborn |
-| [EDA dan statistik: profil demografi dan gaji karyawan](eda-statistics.ipynb) | Eksplorasi 7.917 responden (umur, gaji, pekerjaan, pendidikan, riwayat stres) dengan analisis univariat, bivariat, dan multivariat. | pandas, SciPy, Matplotlib, Seaborn |
-| [Pembersihan data: menyiapkan dataset untuk analisis](data-collection-cleaning.ipynb) | Pengecekan tipe data, nilai kosong, outlier, dan duplikat. 699 baris kosong dibersihkan (7.917 menjadi 7.218 baris) dan 72 baris duplikat teridentifikasi. | pandas, NumPy, Seaborn |
+## 🧩 Keahlian
 
-Catatan: file data (CSV) tidak disertakan di repository ini.
+- **Data Analysis:** SQL, Python, R
+- **Visualization & BI:** Power BI, Tableau
+- **Python:** pandas, NumPy, SciPy, scikit-learn, Matplotlib, Seaborn
+- **Spreadsheet:** Microsoft Excel tingkat lanjut
+- **Finance & Accounting:** pengelolaan arus kas, pelaporan keuangan, administrasi keuangan
+- **Analytical Methods:** EDA, data cleaning, hypothesis testing, A/B testing, K-Means clustering, PCA
 
-## Keahlian
+## 📊 Featured Data Projects
 
-- Software akuntansi: Accurate, Zahir, SAP, MYOB
-- Analisis data: SQL, Python, R, Power BI, Tableau, Excel tingkat lanjut
-- Metode: EDA, pembersihan data, uji hipotesis, A/B testing, K-Means clustering, PCA
+### 1. A/B Testing — Dampak Varian Baru terhadap Pendapatan
+Menganalisis perbedaan pendapatan 30 hari antara dua varian menggunakan pengujian hipotesis dan effect size.
 
-## Kontak
+**Tools:** Python, pandas, SciPy, Seaborn
 
-- Email: ramadhana745@gmail.com
-- Domisili: Jember, Jawa Timur
+[Open Notebook](./ab-testing-experimentation.ipynb)
+
+### 2. Customer Segmentation — K-Means
+Melakukan segmentasi nasabah kartu kredit menggunakan data preprocessing, RobustScaler, elbow method, K-Means, dan PCA.
+
+**Tools:** Python, pandas, scikit-learn, Matplotlib, Seaborn
+
+[Open Notebook](./customer-segmentation-kmeans.ipynb)
+
+### 3. EDA & Statistics — Demografi dan Gaji
+Eksplorasi data demografi dan gaji melalui analisis univariat, bivariat, multivariat, serta visualisasi.
+
+**Tools:** Python, pandas, SciPy, Matplotlib, Seaborn
+
+[Open Notebook](./eda-statistics.ipynb)
+
+### 4. Data Cleaning — Persiapan Dataset
+Melakukan pemeriksaan tipe data, missing values, outlier, dan duplikasi untuk menyiapkan dataset sebelum analisis.
+
+**Tools:** Python, pandas, NumPy, Seaborn
+
+[Open Notebook](./data-collection-cleaning.ipynb)
+
+## 💼 Professional Focus
+
+Saya tertarik pada pekerjaan yang menggabungkan:
+
+**Finance & Accounting → Data Analysis → Business Intelligence → Decision Support**
+
+Fokus saya adalah menggunakan data untuk membantu memahami kondisi bisnis, menemukan pola, membuat visualisasi, dan menghasilkan insight yang dapat digunakan dalam pengambilan keputusan.
+
+## 📫 Contact
+
+- **Email:** ramadhana745@gmail.com
+- **GitHub:** https://github.com/ramadhana-id
+- **Portfolio:** https://ramadhana-id.github.io/My-Notebook/
+
+---
+
+*This repository contains selected data analytics projects and notebooks for portfolio purposes.*

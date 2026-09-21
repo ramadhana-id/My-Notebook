@@ -145,12 +145,20 @@
     text-transform: uppercase;
   }
 
-  .skill-cards {
+  .skills-area {
+    min-width: 0;
+  }
+
+  .skills-area .skill-cards {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
     margin-top: 1.5rem;
     max-width: 48rem;
+  }
+
+  .skills-area .skills {
+    margin-top: 2rem;
   }
 
   .skill-card {
@@ -863,8 +871,8 @@
 
     <section class="block" id="keahlian" aria-labelledby="h-keahlian">
       <div class="block-grid">
-        <div>
-          <h2 id="h-keahlian">Keahlian</h2>
+        <h2 id="h-keahlian">Keahlian</h2>
+        <div class="skills-area">
           <div class="skill-cards" aria-label="Skill utama">
             <article class="skill-card">
               <div class="skill-icon">SQL</div>
@@ -882,19 +890,20 @@
               <p>Dashboard, visualisasi, KPI, dan penyajian insight untuk mendukung keputusan.</p>
             </article>
           </div>
+
+          <dl class="skills">
+            <dt>Software akuntansi</dt>
+            <dd>Accurate, Zahir, SAP, MYOB</dd>
+            <dt>Analisis data</dt>
+            <dd>SQL, Python (pandas, NumPy, SciPy, scikit-learn, Matplotlib, Seaborn), R, Power BI, Tableau, Excel tingkat lanjut</dd>
+            <dt>Metode analisis</dt>
+            <dd>EDA, pembersihan data, uji hipotesis (Shapiro-Wilk, Levene, t-test), A/B testing, K-Means clustering, PCA</dd>
+            <dt>Keuangan</dt>
+            <dd>Pengelolaan arus kas, pelaporan keuangan, administrasi keuangan</dd>
+            <dt>Cara kerja</dt>
+            <dd>Problem solving, negosiasi, public speaking, adaptasi teknologi</dd>
+          </dl>
         </div>
-        <dl class="skills">
-          <dt>Software akuntansi</dt>
-          <dd>Accurate, Zahir, SAP, MYOB</dd>
-          <dt>Analisis data</dt>
-          <dd>SQL, Python (pandas, NumPy, SciPy, scikit-learn, Matplotlib, Seaborn), R, Power BI, Tableau, Excel tingkat lanjut</dd>
-          <dt>Metode analisis</dt>
-          <dd>EDA, pembersihan data, uji hipotesis (Shapiro-Wilk, Levene, t-test), A/B testing, K-Means clustering, PCA</dd>
-          <dt>Keuangan</dt>
-          <dd>Pengelolaan arus kas, pelaporan keuangan, administrasi keuangan</dd>
-          <dt>Cara kerja</dt>
-          <dd>Problem solving, negosiasi, public speaking, adaptasi teknologi</dd>
-        </dl>
       </div>
     </section>
 

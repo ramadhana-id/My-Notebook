@@ -23,7 +23,7 @@ Menganalisis apakah perubahan/varian baru memberikan perbedaan terhadap revenue.
 **Result**  
 Berdasarkan dataset yang dianalisis, Variant B memiliki rata-rata revenue yang lebih tinggi dibandingkan Variant A.
 
-📓 **[Open Notebook](./ab-testing-experimentation.ipynb)**
+📓 **[Open Notebook](./notebooks/ab-testing-experimentation.ipynb)**
 
 ---
 
@@ -38,7 +38,7 @@ Menganalisis karakteristik pelanggan menggunakan metode clustering untuk menemuk
 - K-Means Clustering
 - PCA Visualization
 
-📓 **[Open Notebook](./customer-segmentation-kmeans.ipynb)**
+📓 **[Open Notebook](./notebooks/customer-segmentation-kmeans.ipynb)**
 
 ---
 
@@ -52,7 +52,7 @@ Melakukan exploratory data analysis untuk memahami karakteristik dataset, distri
 - Multivariate Analysis
 - Statistical Analysis
 
-📓 **[Open Notebook](./eda-statistics.ipynb)**
+📓 **[Open Notebook](./notebooks/eda-statistics.ipynb)**
 
 ---
 
@@ -66,7 +66,7 @@ Melakukan proses pembersihan dan persiapan dataset sebelum digunakan untuk anali
 - Data Cleaning
 - Data Validation
 
-📓 **[Open Notebook](./data-collection-cleaning.ipynb)**
+📓 **[Open Notebook](./notebooks/data-collection-cleaning.ipynb)**
 
 ---
 

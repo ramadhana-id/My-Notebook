@@ -139,8 +139,8 @@ Namun, kesimpulan khusus mengenai **mediasi** belum dituliskan pada project ini 
 | `data-sem.csv` | Dataset penelitian |
 | `pls-sem.splsm` | File project/model SEM-PLS |
 | `model-sem-pls.png` | Visualisasi model SEM-PLS |
-| `bootstrapping-direct-effects.png` | Screenshot hasil Direct Effects |
-| `bootstrapping-total-effects.png` | Screenshot hasil Total Effects |
+| `bootstrapping-direct-effects.png` | hasil Direct Effects |
+| `bootstrapping-total-effects.png` | hasil Total Effects |
 | `README.md` | Dokumentasi project |
 
 ## Tools & Metode

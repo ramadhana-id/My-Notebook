@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ramadhana, S.Ak., CPS., CBI. — Finance, Data & Business Intelligence</title>
+<meta name="description" content="Portfolio Ramadhana, S.Ak., CPS., CBI. — Finance, Data Analytics, Business Intelligence, dan Founder RETRO GROUP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#fbfaf8;
+  --paper:#fff;
+  --ink:#17252d;
+  --muted:#617078;
+  --line:#e4e8e8;
+  --navy:#173746;
+  --navy-2:#102a37;
+  --peach:#fce9e5;
+  --peach-accent:#e65e55;
+  --blue:#e7f1fc;
+  --blue-accent:#2774c7;
+  --green:#e8f6ee;
+  --green-accent:#23815e;
+  --soft:#f4f6f5;
+  --shadow:0 18px 50px rgba(23,55,70,.08);
+  --shadow-hover:0 24px 65px rgba(23,55,70,.14);
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 92% 12%,rgba(252,233,229,.7),transparent 25rem),
+    radial-gradient(circle at 6% 45%,rgba(231,241,252,.7),transparent 25rem),
+    var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.65;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+
+/* NAV */
+.nav{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(251,250,248,.86);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(228,232,232,.8);
+}
+.nav-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{text-decoration:none;display:flex;align-items:center;gap:12px}
+.brand-mark{
+  width:39px;height:39px;border-radius:50%;
+  display:grid;place-items:center;
+  background:var(--navy);color:#fff;
+  font-family:var(--serif);font-size:20px;
+}
+.brand-name{font-weight:700;letter-spacing:.18em;font-size:.88rem}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-links a{text-decoration:none;padding:10px 12px;border-radius:9px;font-size:.9rem;color:#44535b}
+.nav-links a:hover{background:#eef3f3;color:var(--navy)}
+.nav-cta{
+  text-decoration:none;background:var(--navy);color:#fff;
+  padding:12px 20px;border-radius:999px;font-weight:600;font-size:.88rem;
+  box-shadow:0 8px 22px rgba(23,55,70,.15);
+}
+.nav-cta:hover{background:var(--navy-2);transform:translateY(-1px)}
+@media(max-width:900px){
+  .nav-links{display:none}
+}
+@media(max-width:560px){
+  .wrap{width:min(100% - 24px,1180px)}
+  .nav-cta{padding:10px 14px}
+  .brand-name{font-size:.76rem}
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  min-height:650px;
+  display:grid;
+  align-items:center;
+  overflow:hidden;
+  padding:58px 0 78px;
+}
+.hero:after{
+  content:"";
+  position:absolute;left:-10%;right:-10%;bottom:-115px;height:170px;
+  background:var(--bg);
+  border-radius:50% 50% 0 0 / 100% 100% 0 0;
+  z-index:1;
+}
+.hero-grid{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1.02fr .98fr;gap:30px;align-items:center;
+}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.32em;color:#6c7a80;margin:0 0 12px}
+h1{
+  font-family:var(--serif);
+  font-size:clamp(3.15rem,6.4vw,5.6rem);
+  line-height:1.02;
+  letter-spacing:-.045em;
+  font-weight:600;
+  margin:0 0 15px;
+}
+.role{
+  font-family:var(--serif);
+  font-size:clamp(1.25rem,2.1vw,1.65rem);
+  line-height:1.35;
+  margin:0 0 20px;
+}
+.hero-copy{max-width:620px;color:#516169;font-size:1rem}
+.hero-copy strong{color:var(--ink)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:46px;padding:11px 18px;border-radius:999px;
+  text-decoration:none;font-weight:700;font-size:.9rem;
+  border:1px solid var(--navy);transition:.22s ease;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(23,55,70,.13)}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-secondary{background:rgba(255,255,255,.7);color:var(--navy)}
+.btn-light{background:#fff;border-color:#d7dfdf;color:var(--navy)}
+
+.hero-photo-wrap{position:relative;min-height:530px;display:flex;justify-content:flex-end;align-items:center}
+.hero-photo{
+  width:min(560px,100%);
+  height:530px;
+  object-fit:cover;
+  object-position:center 30%;
+  border-radius:30px 30px 30px 120px;
+  box-shadow:var(--shadow);
+  background:#eee;
+}
+.hero-note{
+  position:absolute;right:-6px;top:32px;
+  width:145px;padding:12px 14px;
+  font-family:var(--serif);font-style:italic;font-size:1.1rem;
+  line-height:1.18;text-align:center;
+  transform:rotate(-5deg);
+}
+.hero-badge{
+  position:absolute;right:0;bottom:25px;
+  background:rgba(255,255,255,.92);
+  border:1px solid rgba(220,227,227,.9);
+  border-radius:20px;padding:15px 20px;
+  display:flex;align-items:center;gap:13px;
+  box-shadow:0 15px 35px rgba(23,55,70,.12);
+}
+.badge-icon{width:42px;height:42px;border-radius:12px;background:#edf6f4;color:var(--green-accent);display:grid;place-items:center;font-size:20px}
+.badge-text{font-size:.8rem;line-height:1.35;font-weight:700}
+@media(max-width:900px){
+  .hero{padding:45px 0 70px}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-photo-wrap{min-height:auto;margin-top:15px;justify-content:center}
+  .hero-photo{height:480px;width:min(620px,100%);border-radius:28px}
+  .hero-note{right:15px}
+}
+@media(max-width:560px){
+  .hero{padding-top:34px}
+  h1{font-size:clamp(2.7rem,14vw,4rem)}
+  .role{font-size:1.18rem}
+  .hero-photo{height:430px;border-radius:24px}
+  .hero-note{display:none}
+  .hero-badge{right:10px;bottom:15px}
+}
+
+/* SECTION COMMON */
+.section{padding:92px 0}
+.section-head{text-align:center;max-width:760px;margin:0 auto 48px}
+.kicker{font-size:.75rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:#6f7b80;margin:0 0 10px}
+.section-title{font-family:var(--serif);font-size:clamp(2.3rem,4.5vw,3.4rem);line-height:1.08;margin:0 0 10px;letter-spacing:-.035em}
+.section-subtitle{font-family:var(--serif);font-size:1.25rem;margin:0 0 16px}
+.section-description{color:var(--muted);margin:0}
+
+/* RETRO */
+.retro-section{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 90% 20%,rgba(252,233,229,.9),transparent 22rem),
+    radial-gradient(circle at 5% 75%,rgba(231,241,252,.8),transparent 22rem);
+}
+.retro-section:before{
+  content:"";
+  position:absolute;width:360px;height:360px;border:1px solid rgba(39,116,199,.08);
+  border-radius:50%;right:-160px;top:130px;
+}
+.retro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.retro-card{
+  position:relative;min-height:405px;border-radius:26px;padding:28px;
+  overflow:hidden;border:1px solid transparent;
+  display:flex;flex-direction:column;
+  transition:.25s ease;
+}
+.retro-card:hover{transform:translateY(-7px);box-shadow:var(--shadow-hover)}
+.retro-card.peach{background:linear-gradient(145deg,#fff1ee,var(--peach));border-color:#f8d7d1}
+.retro-card.blue{background:linear-gradient(145deg,#eff7ff,var(--blue));border-color:#d5e6f9}
+.retro-card.green{background:linear-gradient(145deg,#effaf4,var(--green));border-color:#d5eddf}
+.card-top{display:flex;justify-content:space-between;align-items:center}
+.card-icon{
+  width:58px;height:58px;border-radius:15px;background:rgba(255,255,255,.82);
+  display:grid;place-items:center;font-size:26px;
+  box-shadow:0 6px 18px rgba(23,55,70,.07);
+}
+.card-number{font-family:var(--serif);font-size:1rem;opacity:.8}
+.retro-card h3{font-family:var(--serif);font-size:1.8rem;line-height:1.1;margin:23px 0 7px;letter-spacing:-.025em}
+.card-tag{font-family:var(--serif);font-size:1.1rem;margin:0 0 15px}
+.peach .card-tag{color:var(--peach-accent)}
+.blue .card-tag{color:var(--blue-accent)}
+.green .card-tag{color:var(--green-accent)}
+.retro-card p{color:#53646c;margin:0;max-width:330px}
+.card-link{margin-top:auto;padding-top:25px;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:10px}
+.card-link span{
+  width:39px;height:39px;border-radius:50%;display:grid;place-items:center;color:#fff;
+  font-size:18px;transition:.2s ease;
+}
+.peach .card-link{color:var(--peach-accent)}
+.peach .card-link span{background:var(--peach-accent)}
+.blue .card-link{color:var(--blue-accent)}
+.blue .card-link span{background:var(--blue-accent)}
+.green .card-link{color:var(--green-accent)}
+.green .card-link span{background:var(--green-accent)}
+.card-link:hover span{transform:translateX(3px)}
+@media(max-width:900px){.retro-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.retro-card{min-height:350px;padding:24px}.retro-card h3{font-size:1.55rem}}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:65px;align-items:start}
+.about-title{font-family:var(--serif);font-size:2.1rem;line-height:1.15;margin:0}
+.prose{max-width:720px;color:#53636b}
+.prose p{margin:0 0 17px}
+.info-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.info-box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.info-box strong{display:block;font-family:var(--serif);font-size:1.3rem;margin-bottom:2px}
+.info-box span{font-size:.8rem;color:var(--muted)}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:25px}.info-strip{grid-template-columns:1fr}}
+
+/* EXPERIENCE / PROJECTS */
+.timeline,.project-list{max-width:880px;margin:auto}
+.timeline-item{
+  display:grid;grid-template-columns:145px 1fr;gap:30px;
+  padding:25px 0;border-bottom:1px solid var(--line);
+}
+.timeline-item:first-child{padding-top:0}
+.time{font-size:.88rem;font-weight:700;color:#6b797f}
+.timeline-item h3,.project h3{font-family:var(--serif);font-size:1.45rem;line-height:1.2;margin:0 0 3px}
+.timeline-item .company{color:#6a787e;font-size:.92rem}
+.timeline-item p{margin:9px 0 0;color:#55656c}
+@media(max-width:640px){.timeline-item{grid-template-columns:1fr;gap:6px}}
+
+
+/* GITHUB PROJECT CTA — COMPACT FULL WIDTH */
+.github-cta{
+  position:relative;
+  width:100%;
+  margin-top:22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  min-height:68px;
+  padding:10px 18px;
+  border-radius:15px;
+  background:linear-gradient(135deg,#173746,#0e2b38);
+  color:#fff;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 9px 22px rgba(23,55,70,.13);
+  overflow:hidden;
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+.github-cta:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.07),transparent);
+  transform:translateX(-100%);
+  transition:transform .5s ease;
+}
+.github-cta:hover{
+  transform:translateY(-2px);
+  box-shadow:0 13px 28px rgba(23,55,70,.19);
+}
+.github-cta:hover:before{transform:translateX(100%)}
+.github-left{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:center;
+  gap:13px;
+  min-width:0;
+}
+.github-icon{
+  width:40px;
+  height:40px;
+  flex:0 0 40px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.12);
+}
+.github-icon svg{width:21px;height:21px;fill:#fff}
+.github-label{
+  display:block;
+  font-size:.59rem;
+  font-weight:700;
+  letter-spacing:.23em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.62);
+  line-height:1.1;
+}
+.github-title{
+  display:block;
+  font-size:.92rem;
+  font-weight:700;
+  color:#fff;
+  line-height:1.2;
+  margin-top:3px;
+}
+.github-arrow{
+  position:relative;
+  z-index:1;
+  width:36px;
+  height:36px;
+  flex:0 0 36px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#d9f4ef;
+  color:#173746;
+  font-size:1.12rem;
+  font-weight:700;
+  transition:transform .22s ease;
+}
+.github-cta:hover .github-arrow{transform:translateX(3px)}
+@media(max-width:560px){
+  .github-cta{min-height:62px;padding:9px 13px;border-radius:13px}
+  .github-left{gap:10px}
+  .github-icon{width:36px;height:36px;flex-basis:36px;border-radius:10px}
+  .github-icon svg{width:19px;height:19px}
+  .github-title{font-size:.84rem}
+  .github-label{font-size:.53rem}
+  .github-arrow{width:32px;height:32px;flex-basis:32px;font-size:1rem}
+}
+/* PROJECT CARDS */
+.project{
+  padding:27px 0;border-bottom:1px solid var(--line);
+}
+.project:first-child{padding-top:0}
+.project:last-child{border-bottom:0}
+.project .meta{font-size:.78rem;color:var(--blue-accent);font-weight:700;letter-spacing:.04em;margin:0 0 8px}
+.project p{color:#56666d;margin:8px 0}
+.project-result{font-family:var(--serif);font-size:1.12rem;color:var(--ink)!important}
+.project a{display:inline-flex;margin-top:8px;color:var(--navy);font-weight:700;text-decoration:none}
+.project a:hover{text-decoration:underline}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.skill{
+  background:#fff;border:1px solid var(--line);border-radius:20px;padding:25px;
+  transition:.22s ease;
+}
+.skill:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.skill-icon{width:48px;height:48px;border-radius:13px;background:#edf3f3;display:grid;place-items:center;font-weight:700;color:var(--navy);margin-bottom:16px}
+.skill h3{font-family:var(--serif);font-size:1.35rem;margin:0 0 6px}
+.skill p{margin:0;color:var(--muted);font-size:.9rem}
+.skill-details{margin-top:35px;display:grid;grid-template-columns:180px 1fr;gap:13px 28px;max-width:850px}
+.skill-details dt{font-weight:700}
+.skill-details dd{margin:0;color:var(--muted)}
+@media(max-width:760px){.skills-grid{grid-template-columns:1fr}.skill-details{grid-template-columns:1fr;gap:3px 0}.skill-details dd{margin-bottom:12px}}
+
+/* CONTACT */
+.contact{
+  background:var(--navy);color:#fff;
+  position:relative;overflow:hidden;
+}
+.contact:after{
+  content:"";position:absolute;width:440px;height:440px;border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;right:-160px;top:-180px;
+}
+.contact .section-head{position:relative;z-index:1}
+.contact .kicker,.contact .section-description{color:rgba(255,255,255,.7)}
+.contact .section-title{color:#fff}
+.contact-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;position:relative;z-index:1}
+.contact .btn-primary{background:#fff;color:var(--navy);border-color:#fff}
+.contact .btn-secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+.contact-info{display:flex;justify-content:center;flex-wrap:wrap;gap:22px;margin-top:25px;color:rgba(255,255,255,.72);font-size:.9rem;position:relative;z-index:1}
+.contact-info a{text-decoration:none}
+
+/* FOOTER */
+.footer{padding:26px 0 38px;background:#f1f3f2}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;color:#718087;font-size:.82rem}
+.footer-brand{font-family:var(--serif);font-size:1.1rem;color:var(--ink)}
+@media(max-width:620px){.footer-inner{flex-direction:column;align-items:flex-start}}
+
+/* SMALL DETAILS */
+.divider{width:55px;height:3px;margin:19px auto 0;background:linear-gradient(90deg,var(--peach-accent),var(--blue-accent));border-radius:99px}
+.reveal{animation:fadeUp .65s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{animation:none}.retro-card,.skill,.btn{transition:none}}
+</style>
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#home" aria-label="Ramadhana">
+      <span class="brand-mark">R</span>
+      <span class="brand-name">RAMADHANA</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <a href="#tentang">About</a>
+      <a href="#karier">Experience</a>
+      <a href="#proyek">Projects</a>
+      <a href="#retro-group">RETRO GROUP</a>
+      <a href="#kontak">Contact</a>
+    </nav>
+
+    <a class="nav-cta" href="#kontak">Let's Connect →</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <p class="eyebrow">HELLO, I'M</p>
+      <h1>Ramadhana,<br>S.Ak., CPS., CBI.</h1>
+      <p class="role">Akuntan • Data Analyst • Business Intelligence • Entrepreneur</p>
+      <p class="hero-copy">
+        Saat ini saya berperan sebagai <strong>Head Finance &amp; Business Intelligence</strong>
+        di Rumah Sakit Umum Universitas Muhammadiyah Jember dan
+        <strong>Founder RETRO GROUP</strong>, yang menaungi tiga lini bisnis:
+        RETRO STORE, RETR(OFFICE), dan RETRO MEDIA SOLUTION.
+      </p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="assets/CV-Ramadhana.pdf" target="_blank" rel="noopener">↓ &nbsp;Download CV</a>
+        <a class="btn btn-secondary" href="mailto:ramadhana745@gmail.com">✉ &nbsp; Contact Me</a>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap reveal">
+      <img class="hero-photo"
+           src="assets/foto-ramadhana.png"
+           alt="Ramadhana bekerja di depan laptop"
+           onerror="this.onerror=null;this.src='assets/foto-profil.jpg';">
+      <div class="hero-note">Turning<br>Data into<br>Meaningful<br>Impact</div>
+      <div class="hero-badge">
+        <div class="badge-icon">▥</div>
+        <div class="badge-text">Data<br>People<br>Better Decisions</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section retro-section" id="retro-group">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Founder</p>
+      <h2 class="section-title">RETRO GROUP</h2>
+      <p class="section-subtitle">Three Business Lines, One Ecosystem</p>
+      <div class="divider"></div>
+      <p class="section-description" style="margin-top:18px">
+        RETRO GROUP adalah ekosistem bisnis yang saya bangun dengan tiga fokus:
+        teknologi, data, dan media.
+      </p>
+    </div>
+
+    <div class="retro-grid">
+
+      <article class="retro-card peach">
+        <div class="card-top">
+          <div class="card-icon"></div>
+          <span class="card-number">01</span>
+        </div>
+        <h3>RETRO STORE</h3>
+        <p class="card-tag">Apple &amp; Technology</p>
+        <p>Penjualan produk Apple untuk kebutuhan teknologi dan perangkat digital.</p>
+        <a class="card-link" href="#kontak"><span>→</span> Learn More</a>
+      </article>
+
+      <article class="retro-card blue">
+        <div class="card-top">
+          <div class="card-icon">▥</div>
+          <span class="card-number">02</span>
+        </div>
+        <h3>RETR(OFFICE)</h3>
+        <p class="card-tag">Data Analytics &amp; Business Intelligence</p>
+        <p>Jasa analisis data untuk kebutuhan skripsi, tesis, riset, bisnis, dan Business Intelligence.</p>
+        <a class="card-link" href="#kontak"><span>→</span> Learn More</a>
+      </article>
+
+      <article class="retro-card green">
+        <div class="card-top">
+          <div class="card-icon">📣</div>
+          <span class="card-number">03</span>
+        </div>
+        <h3>RETRO MEDIA SOLUTION</h3>
+        <p class="card-tag">Digital Media &amp; Promotion</p>
+        <p>Jasa paid promote dan layanan promosi media untuk membantu kebutuhan publikasi dan pemasaran.</p>
+        <a class="card-link" href="#kontak"><span>→</span> Learn More</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tentang">
+  <div class="wrap about-grid">
+    <div>
+      <p class="kicker">About Me</p>
+      <h2 class="about-title">Finance meets Data.</h2>
+    </div>
+    <div class="prose">
+      <p>
+        Saya lulusan Sarjana Akuntansi Universitas Muhammadiyah Jember dengan
+        IPK 3,94. Karier saya berkembang dari administrasi dan accounting hingga
+        menjadi Head Finance &amp; Business Intelligence di lingkungan rumah sakit.
+      </p>
+      <p>
+        Saat ini saya mengembangkan kemampuan di bidang data analytics dan
+        Business Intelligence menggunakan SQL, Python, Power BI, Tableau, dan Excel.
+        Saya tertarik mengubah data menjadi informasi yang lebih mudah dipahami
+        dan digunakan untuk pengambilan keputusan.
+      </p>
+
+      <div class="info-strip">
+        <div class="info-box"><strong>3.94</strong><span>IPK Sarjana Akuntansi</span></div>
+        <div class="info-box"><strong>4+</strong><span>Data Analytics Projects</span></div>
+        <div class="info-box"><strong>3</strong><span>Business Lines RETRO GROUP</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="karier" style="background:#f4f6f5">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Experience</p>
+      <h2 class="section-title">Perjalanan Karier</h2>
+      <p class="section-description">Pengalaman yang membentuk kombinasi Finance, Accounting, dan Business Intelligence.</p>
+    </div>
+
+    <div class="timeline">
+      <article class="timeline-item">
+        <div class="time">2022 – Sekarang</div>
+        <div>
+          <h3>Head Finance &amp; Business Intelligence</h3>
+          <div class="company">Rumah Sakit Umum Universitas Muhammadiyah Jember</div>
+          <p>Memimpin fungsi keuangan, pengelolaan arus kas, pencatatan akuntansi, pelaporan, serta pengembangan pendekatan berbasis data.</p>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="time">2021 – 2022</div>
+        <div>
+          <h3>Staff Accounting</h3>
+          <div class="company">Universitas Muhammadiyah Jember</div>
+          <p>Mengelola arus kas pembangunan rumah sakit dan terlibat dalam negosiasi harga dengan rekanan.</p>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="time">2019 – 2021</div>
+        <div>
+          <h3>Sekretaris</h3>
+          <div class="company">Galeri Investasi BEI</div>
+          <p>Menangani administrasi, kesekretariatan, dan kearsipan data nasabah.</p>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="time">2017 – 2021</div>
+        <div>
+          <h3>Sarjana Akuntansi</h3>
+          <div class="company">Universitas Muhammadiyah Jember • IPK 3,94</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="proyek">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Selected Work</p>
+      <h2 class="section-title">Data Analytics Projects</h2>
+      <p class="section-description">Beberapa project yang menunjukkan proses dari data cleaning, exploratory analysis hingga machine learning dan experimentation.</p>
+    </div>
+
+    <div class="project-list">
+
+      <article class="project">
+        <p class="meta">A/B TESTING • PYTHON</p>
+        <h3>Uji A/B: dampak varian baru terhadap pendapatan 30 hari</h3>
+        <p>505 pengguna aplikasi langganan dari 6 negara, dianalisis menggunakan Shapiro-Wilk, Levene, independent t-test, dan Cohen's d.</p>
+        <p class="project-result">Rata-rata pendapatan varian B sekitar 20% lebih tinggi dari varian A, dengan perbedaan signifikan dan ukuran efek besar.</p>
+        <a class="github-cta" href="https://github.com/ramadhana-id/My-Notebook/blob/main/notebooks/ab-testing-experimentation.ipynb" target="_blank" rel="noopener" aria-label="Buka project di GitHub">
+        <span class="github-left">
+          <span class="github-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img"><path d="M12 .5a11.5 11.5 0 0 0-3.636 22.41c.576.106.787-.25.787-.555 0-.274-.01-1-.015-1.963-3.202.696-3.878-1.544-3.878-1.544-.524-1.332-1.28-1.687-1.28-1.687-1.046-.715.08-.7.08-.7 1.156.081 1.764 1.188 1.764 1.188 1.028 1.762 2.697 1.253 3.353.958.104-.745.402-1.253.731-1.542-2.556-.291-5.243-1.278-5.243-5.688 0-1.257.45-2.284 1.187-3.09-.119-.291-.515-1.462.112-3.047 0 0 .968-.31 3.17 1.18A11.02 11.02 0 0 1 12 6.39c.98.004 1.966.132 2.886.387 2.2-1.49 3.166-1.18 3.166-1.18.63 1.585.234 2.756.115 3.047.74.806 1.185 1.833 1.185 3.09 0 4.421-2.692 5.394-5.257 5.679.413.356.78 1.06.78 2.137 0 1.543-.014 2.788-.014 3.166 0 .308.208.667.793.554A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          </span>
+          <span>
+            <span class="github-label">View Project</span>
+            <span class="github-title">Lihat di GitHub</span>
+          </span>
+        </span>
+        <span class="github-arrow" aria-hidden="true">→</span>
+      </a>
+      </article>
+
+      <article class="project">
+        <p class="meta">MACHINE LEARNING • K-MEANS</p>
+        <h3>Segmentasi nasabah kartu kredit dengan K-Means</h3>
+        <p>Dataset transaksi dianalisis melalui EDA, korelasi, data cleaning, RobustScaler, elbow method, K-Means, dan PCA 2D.</p>
+        <p class="project-result">49.457 data lengkap dikelompokkan menjadi 6 segmen dengan karakteristik berbeda.</p>
+        <a class="github-cta" href="https://github.com/ramadhana-id/My-Notebook/blob/main/notebooks/customer-segmentation-kmeans.ipynb" target="_blank" rel="noopener" aria-label="Buka project di GitHub">
+        <span class="github-left">
+          <span class="github-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img"><path d="M12 .5a11.5 11.5 0 0 0-3.636 22.41c.576.106.787-.25.787-.555 0-.274-.01-1-.015-1.963-3.202.696-3.878-1.544-3.878-1.544-.524-1.332-1.28-1.687-1.28-1.687-1.046-.715.08-.7.08-.7 1.156.081 1.764 1.188 1.764 1.188 1.028 1.762 2.697 1.253 3.353.958.104-.745.402-1.253.731-1.542-2.556-.291-5.243-1.278-5.243-5.688 0-1.257.45-2.284 1.187-3.09-.119-.291-.515-1.462.112-3.047 0 0 .968-.31 3.17 1.18A11.02 11.02 0 0 1 12 6.39c.98.004 1.966.132 2.886.387 2.2-1.49 3.166-1.18 3.166-1.18.63 1.585.234 2.756.115 3.047.74.806 1.185 1.833 1.185 3.09 0 4.421-2.692 5.394-5.257 5.679.413.356.78 1.06.78 2.137 0 1.543-.014 2.788-.014 3.166 0 .308.208.667.793.554A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          </span>
+          <span>
+            <span class="github-label">View Project</span>
+            <span class="github-title">Lihat di GitHub</span>
+          </span>
+        </span>
+        <span class="github-arrow" aria-hidden="true">→</span>
+      </a>
+      </article>
+
+      <article class="project">
+        <p class="meta">EDA • STATISTICS</p>
+        <h3>EDA dan statistik: profil demografi dan gaji karyawan</h3>
+        <p>Analisis 7.917 responden menggunakan statistik deskriptif, univariat, bivariat, multivariat, serta berbagai visualisasi.</p>
+        <p class="project-result">Kelompok usia terbesar adalah 36–45 tahun, dengan perbandingan distribusi gaji berdasarkan gender.</p>
+        <a class="github-cta" href="https://github.com/ramadhana-id/My-Notebook/blob/main/notebooks/eda-statistics.ipynb" target="_blank" rel="noopener" aria-label="Buka project di GitHub">
+        <span class="github-left">
+          <span class="github-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img"><path d="M12 .5a11.5 11.5 0 0 0-3.636 22.41c.576.106.787-.25.787-.555 0-.274-.01-1-.015-1.963-3.202.696-3.878-1.544-3.878-1.544-.524-1.332-1.28-1.687-1.28-1.687-1.046-.715.08-.7.08-.7 1.156.081 1.764 1.188 1.764 1.188 1.028 1.762 2.697 1.253 3.353.958.104-.745.402-1.253.731-1.542-2.556-.291-5.243-1.278-5.243-5.688 0-1.257.45-2.284 1.187-3.09-.119-.291-.515-1.462.112-3.047 0 0 .968-.31 3.17 1.18A11.02 11.02 0 0 1 12 6.39c.98.004 1.966.132 2.886.387 2.2-1.49 3.166-1.18 3.166-1.18.63 1.585.234 2.756.115 3.047.74.806 1.185 1.833 1.185 3.09 0 4.421-2.692 5.394-5.257 5.679.413.356.78 1.06.78 2.137 0 1.543-.014 2.788-.014 3.166 0 .308.208.667.793.554A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          </span>
+          <span>
+            <span class="github-label">View Project</span>
+            <span class="github-title">Lihat di GitHub</span>
+          </span>
+        </span>
+        <span class="github-arrow" aria-hidden="true">→</span>
+      </a>
+      </article>
+
+      <article class="project">
+        <p class="meta">DATA CLEANING • PYTHON</p>
+        <h3>Pembersihan data: menyiapkan dataset untuk analisis</h3>
+        <p>Proses pengecekan tipe data, missing value, outlier, duplikat, dan penyaringan dataset menggunakan Python.</p>
+        <p class="project-result">699 baris bernilai kosong dibersihkan sehingga dataset berkurang dari 7.917 menjadi 7.218 baris.</p>
+        <a class="github-cta" href="https://github.com/ramadhana-id/My-Notebook/blob/main/notebooks/data-collection-cleaning.ipynb" target="_blank" rel="noopener" aria-label="Buka project di GitHub">
+        <span class="github-left">
+          <span class="github-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img"><path d="M12 .5a11.5 11.5 0 0 0-3.636 22.41c.576.106.787-.25.787-.555 0-.274-.01-1-.015-1.963-3.202.696-3.878-1.544-3.878-1.544-.524-1.332-1.28-1.687-1.28-1.687-1.046-.715.08-.7.08-.7 1.156.081 1.764 1.188 1.764 1.188 1.028 1.762 2.697 1.253 3.353.958.104-.745.402-1.253.731-1.542-2.556-.291-5.243-1.278-5.243-5.688 0-1.257.45-2.284 1.187-3.09-.119-.291-.515-1.462.112-3.047 0 0 .968-.31 3.17 1.18A11.02 11.02 0 0 1 12 6.39c.98.004 1.966.132 2.886.387 2.2-1.49 3.166-1.18 3.166-1.18.63 1.585.234 2.756.115 3.047.74.806 1.185 1.833 1.185 3.09 0 4.421-2.692 5.394-5.257 5.679.413.356.78 1.06.78 2.137 0 1.543-.014 2.788-.014 3.166 0 .308.208.667.793.554A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          </span>
+          <span>
+            <span class="github-label">View Project</span>
+            <span class="github-title">Lihat di GitHub</span>
+          </span>
+        </span>
+        <span class="github-arrow" aria-hidden="true">→</span>
+      </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#f4f6f5" id="keahlian">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Skills</p>
+      <h2 class="section-title">Tools I Work With</h2>
+    </div>
+
+    <div class="skills-grid">
+      <article class="skill">
+        <div class="skill-icon">SQL</div>
+        <h3>SQL</h3>
+        <p>Query, filtering, aggregation, JOIN, data preparation, dan analisis database.</p>
+      </article>
+      <article class="skill">
+        <div class="skill-icon">Py</div>
+        <h3>Python</h3>
+        <p>pandas, NumPy, SciPy, scikit-learn, Matplotlib, dan Seaborn untuk analisis data.</p>
+      </article>
+      <article class="skill">
+        <div class="skill-icon">BI</div>
+        <h3>Power BI / Tableau</h3>
+        <p>Dashboard, KPI, visualisasi, dan penyajian insight untuk mendukung keputusan.</p>
+      </article>
+    </div>
+
+    <dl class="skill-details">
+      <dt>Software Akuntansi</dt><dd>Accurate, Zahir, SAP, MYOB</dd>
+      <dt>Data &amp; Analytics</dt><dd>SQL, Python, R, Power BI, Tableau, Excel tingkat lanjut</dd>
+      <dt>Metode</dt><dd>EDA, data cleaning, hypothesis testing, A/B testing, K-Means, PCA</dd>
+      <dt>Professional</dt><dd>Problem solving, negosiasi, public speaking, administrasi, dan adaptasi teknologi</dd>
+    </dl>
+  </div>
+</section>
+
+<section class="section contact" id="kontak">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Let's Connect</p>
+      <h2 class="section-title">Have a project or opportunity?</h2>
+      <p class="section-description">Terbuka untuk kolaborasi di bidang Finance, Data Analytics, Business Intelligence, dan layanan RETRO GROUP.</p>
+    </div>
+
+    <div class="contact-actions">
+      <a class="btn btn-primary" href="mailto:ramadhana745@gmail.com">✉ &nbsp; Email Me</a>
+      <a class="btn btn-secondary" href="https://wa.me/6285176749593" target="_blank" rel="noopener">WhatsApp →</a>
+    </div>
+
+    <div class="contact-info">
+      <a href="mailto:ramadhana745@gmail.com">ramadhana745@gmail.com</a>
+      <span>•</span>
+      <a href="https://github.com/ramadhana-id" target="_blank" rel="noopener">github.com/ramadhana-id</a>
+      <span>•</span>
+      <span>Jenggawah, Jember, Jawa Timur</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">Ramadhana, S.Ak., CPS., CBI.</div>
+    <div>From Data to Opportunity, From Ideas to Impact. © 2026</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+SELECT;;;
+    employees.first_name || ' ' || employees.last_name AS employee_name;;;
+    COUNT(order_summary.order_id) AS total_orders;;;
+    ROUND(AVG(order_summary.order_total)::numeric; 2) AS avg_order_value;;
+    ROUND(;;;
+        (SUM(CASE WHEN order_summary.order_total > 1000 THEN 1 ELSE 0 END)::numeric / COUNT(order_summary.order_id)) * 100;;;
+2;;;
+    ) AS pct_large_orders;;;
+FROM (;;;
+    SELECT ;;;
+        orders.order_id;;;
+        orders.employee_id;;;
+        SUM(order_details.unit_price * order_details.quantity * (1 - order_details.discount)) AS order_total;;;
+    FROM orders;;;
+    JOIN order_details ON orders.order_id = order_details.order_id;;;
+    WHERE EXTRACT(YEAR FROM orders.order_date) = 2025;;;
+    GROUP BY orders.order_id; orders.employee_id;;
+) AS order_summary;;;
+JOIN employees ON order_summary.employee_id = employees.employee_id;;;
+GROUP BY employees.first_name; employees.last_name;;
+"ORDER BY avg_order_value DESC;";;;
+;;;
+;;;
+employee_name;total_orders;avg_order_value;pct_large_orders
+Anne Dodsworth;29;2094.16.00;51.72
+Robert King;39;1862.82;38.46.00
+Andrew Fuller;59;1780.89;44.07.00
+Nancy Davolio;73;1683.25.00;50.68
+Steven Buchanan;24;1681.26.00;58.33.00
+Janet Leverling;72;1677.94;55.56.00
+Laura Callahan;53;1428.06.00;52.83
+Margaret Peacock;87;1331.06.00;44.83
+Michael Suyama;37;1056.00.00;37.84
